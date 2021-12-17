@@ -7,7 +7,8 @@ const dummyText = [
     'Soufflé soufflé croissant cookie macaroon. Chocolate bar liquorice sweet apple pie sugar plum muffin. Cookie jujubes sweet shortbread liquorice cookie halvah lollipop chocolate bar. Liquorice pastry tiramisu tiramisu powder.',
     'Sugar plum pastry chupa chups tart pastry donut muffin. Oat cake cupcake dragée soufflé sweet roll marzipan gummies lollipop. Dragée lollipop toffee caramels cheesecake danish.',
     'Dragée wafer dessert jelly marshmallow powder jelly beans toffee brownie. Chocolate cake dragée cookie croissant ice cream bear claw topping sesame snaps. Halvah candy canes muffin muffin liquorice tiramisu biscuit.',
-    'Sesame snaps liquorice icing jujubes powder soufflé. Caramels carrot cake pastry sugar plum cake candy toffee ice cream. Apple pie chocolate cake marzipan carrot cake gingerbread.'
+    'Sesame snaps liquorice icing jujubes powder soufflé. Caramels carrot cake pastry sugar plum cake candy toffee ice cream. Apple pie chocolate cake marzipan carrot cake gingerbread.',
+    'Jelly-o tiramisu jelly-o jelly lollipop tiramisu fruitcake gingerbread gummies. Bonbon halvah biscuit jelly-o shortbread chocolate bar. Jelly-o wafer pudding marshmallow tiramisu sweet carrot cake bonbon. Pastry chocolate cake jelly gummies marshmallow oat cake croissant pie.'
 ];
 
 // Selecting Elements
@@ -24,8 +25,8 @@ form.addEventListener('submit', function (e) {
     const value = parseInt(paragraphAmount.value);
     const random = Math.floor(Math.random() * dummyText.length);
 
-    // for empty, negative and greter tna 9
-    if (isNaN(value) || value <= 0 || value > 9){
+    // for empty, negative and greter than 10
+    if (isNaN(value) || value <= 0 || value > 10){
     result.innerHTML = `<p>${dummyText[random]}</p>`;
     } else {
         const sliceArray = dummyText.slice(0, value);
@@ -36,7 +37,5 @@ form.addEventListener('submit', function (e) {
         // display final dummy text
         result.innerHTML = finalArray;
     }
-
-
 
 });
